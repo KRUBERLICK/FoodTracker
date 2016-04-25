@@ -10,6 +10,12 @@
 
 @implementation RatingControl
 
+//manually implemented to update stars selection evety time the rating value changes
+-(void)setRating:(NSUInteger)rating {
+    _rating = rating;
+    [self updateButtonSelectionStates];
+}
+
 // MARK: Initialization
 -(instancetype)initWithCoder:(NSCoder *)aDecoder {
     //initialize the superclass

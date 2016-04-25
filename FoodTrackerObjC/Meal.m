@@ -10,14 +10,14 @@
 
 @implementation Meal
 
--(id)initWithName:(NSString*)name image:(UIImage*)image rating:(NSInteger)rating {
+-(id)initWithName:(NSString*)name image:(UIImage*)theImage rating:(NSInteger)rating {
     
     if ([name length] < 1 || rating < 0) {
         return nil;
     }
     
     _name = name;
-    _image = image;
+    _image = theImage;
     _rating = rating;
     
     return self;

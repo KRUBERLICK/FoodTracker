@@ -11,7 +11,7 @@
 @interface Meal : NSObject 
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, weak) UIImage *image;
+@property (nonatomic, strong) UIImage *image;
 @property (nonatomic) NSInteger rating;
 
 -(id)initWithName:(NSString*)name image:(UIImage*)image rating:(NSInteger)rating;

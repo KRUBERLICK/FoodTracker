@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B48F5691CCE29AF009BE1BB /* MealTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B48F5681CCE29AF009BE1BB /* MealTableViewCell.m */; };
+		5B48F56C1CCE2D2C009BE1BB /* MealTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B48F56B1CCE2D2C009BE1BB /* MealTableViewController.m */; };
 		5BBBC07F1CCB9E4B00942352 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBC07E1CCB9E4B00942352 /* main.m */; };
 		5BBBC0821CCB9E4B00942352 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBC0811CCB9E4B00942352 /* AppDelegate.m */; };
 		5BBBC0851CCB9E4B00942352 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BBBC0841CCB9E4B00942352 /* ViewController.m */; };
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B48F5671CCE29AF009BE1BB /* MealTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealTableViewCell.h; sourceTree = "<group>"; };
+		5B48F5681CCE29AF009BE1BB /* MealTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealTableViewCell.m; sourceTree = "<group>"; };
+		5B48F56A1CCE2D2C009BE1BB /* MealTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MealTableViewController.h; sourceTree = "<group>"; };
+		5B48F56B1CCE2D2C009BE1BB /* MealTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MealTableViewController.m; sourceTree = "<group>"; };
 		5BBBC07A1CCB9E4B00942352 /* FoodTrackerObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTrackerObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BBBC07E1CCB9E4B00942352 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BBBC0801CCB9E4B00942352 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +101,10 @@
 				5BC698841CCD296500A8418F /* RatingControl.h */,
 				5BC698851CCD296500A8418F /* RatingControl.m */,
 				5BBBC0861CCB9E4B00942352 /* Main.storyboard */,
+				5B48F56A1CCE2D2C009BE1BB /* MealTableViewController.h */,
+				5B48F56B1CCE2D2C009BE1BB /* MealTableViewController.m */,
+				5B48F5671CCE29AF009BE1BB /* MealTableViewCell.h */,
+				5B48F5681CCE29AF009BE1BB /* MealTableViewCell.m */,
 				5BBBC0891CCB9E4B00942352 /* Assets.xcassets */,
 				5BBBC08B1CCB9E4B00942352 /* LaunchScreen.storyboard */,
 				5BBBC08E1CCB9E4B00942352 /* Info.plist */,
@@ -224,6 +234,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B48F56C1CCE2D2C009BE1BB /* MealTableViewController.m in Sources */,
+				5B48F5691CCE29AF009BE1BB /* MealTableViewCell.m in Sources */,
 				5BDFBA371CCD716E007737A4 /* Meal.m in Sources */,
 				5BC698861CCD296500A8418F /* RatingControl.m in Sources */,
 				5BBBC0851CCB9E4B00942352 /* ViewController.m in Sources */,

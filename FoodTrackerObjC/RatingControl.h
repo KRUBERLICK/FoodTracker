@@ -17,4 +17,6 @@
 @property (nonatomic) NSUInteger buttonSize; //star buttons size
 
 -(void)ratingButtonTapped:(UIButton*)button; //tapping the star button
+
+-(void)updateButtonSelectionStates;
 @end

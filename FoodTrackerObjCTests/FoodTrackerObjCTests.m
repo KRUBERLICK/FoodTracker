@@ -15,6 +15,13 @@
 
 @implementation FoodTrackerObjCTests
 
+-(BOOL)isLess:(int)firstNumber than:(int)secondNumber {
+    if (firstNumber < secondNumber) {
+        return YES;
+    }
+    return NO;
+}
+
 -(void)testMealInitialization {
     
     //Success case
@@ -30,6 +37,11 @@
     Meal *badRating = [[Meal alloc] initWithName:@"Realy bad rating" image:nil rating:-1];
     
     XCTAssertNil(badRating, "Rating must be positive");
+    
+    XCTAssertTrue([self isLess:5 than:7]);
+    XCTAssertTrue([self isLess:-5 than:0]);
+    XCTAssertFalse([self isLess:1 than:1]);
+    XCTAssertFalse([self isLess:7 than:-12]);
 }
 
 @end
