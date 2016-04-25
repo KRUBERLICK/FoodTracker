@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MealViewController.h
 //  FoodTrackerObjC
 //
 //  Created by Данил Ильчишин on 4/23/16.
@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingControl.h"
+#import "Meal.h"
 
-@interface ViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface MealViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UILabel *mealNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
 @property (weak, nonatomic) IBOutlet RatingControl *ratingControl;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
+@property (nonatomic, strong) Meal *meal; //meal object to store the info about created meal
 
 - (IBAction)selectImageFromPhotoLibrary:(UITapGestureRecognizer *)sender;
+- (IBAction)cancelButtonTapped:(UIBarButtonItem *)sender;
 
 @end
 

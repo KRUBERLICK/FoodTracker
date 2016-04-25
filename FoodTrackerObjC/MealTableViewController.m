@@ -9,6 +9,7 @@
 #import "MealTableViewController.h"
 #import "Meal.h"
 #import "MealTableViewCell.h"
+#import "MealViewController.h"
 
 @interface MealTableViewController ()
 
@@ -43,6 +44,30 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//action will be performed when user finished creating a new meal
+//after pressing the Save button in MealViewController this method will be called
+-(IBAction) unvindToMealList:(UIStoryboardSegue*) sender {
+    
+    //get the source VC - in this case we assume that it'll be MealViewController
+    MealViewController *sourceViewController = (MealViewController*)[sender sourceViewController];
+    
+    //if cast to MealViewConttoller class is OK - add new record to the table
+    if (sourceViewController) {
+        
+        //get the Meal object from MealVC
+        Meal *meal = [sourceViewController meal];
+        
+        //calculate the index for insertion
+        NSIndexPath *newPath = [NSIndexPath indexPathForRow:[[self meals] count] inSection:0];
+        
+        //add new meal to meal array
+        [[self meals] addObject:meal];
+        
+        //popupate table view with new row
+        [[self tableView] insertRowsAtIndexPaths:@[newPath] withRowAnimation:UITableViewRowAnimationBottom];
+    }
 }
 
 #pragma mark - Table view data source
@@ -84,11 +109,15 @@
 
 
 
-// Override to support editing the table view.
+//overrided to support row deletion
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //if editing action of selected row is deletion - perform deletion
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
         //delete meal from array
         [[self meals] removeObjectAtIndex:indexPath.row];
+        
         //delete the row from the table
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
