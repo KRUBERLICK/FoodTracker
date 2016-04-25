@@ -35,7 +35,7 @@
     //set the delegate to current class
     [imagePicker setDelegate:self];
     //present the image picker view
-    [self presentViewController:imagePicker animated:@YES completion:^(void){}];
+    [self presentViewController:imagePicker animated:YES completion:^(void){}];
     
 }
 
@@ -63,14 +63,14 @@
     [alert addAction:removePhotoAction];
     [alert addAction:cancelAction];
     
-    [self presentViewController:alert animated:@YES completion:^(void){}];
+    [self presentViewController:alert animated:YES completion:^(void){}];
     
 }
 
 //when the user presses Cancel button in image picker view
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     //dismiss the image picker
-    [self dismissViewControllerAnimated:@YES completion:^(void){}];
+    [self dismissViewControllerAnimated:YES completion:^(void){}];
 }
 
 //when user selects a photo
@@ -80,14 +80,14 @@
     //set the meal photo view
     [[self photoImageView] setImage:selectedImage];
     //dismiss the image picker
-    [self dismissViewControllerAnimated:@YES completion:^(void){}];
+    [self dismissViewControllerAnimated:YES completion:^(void){}];
 }
 
 //pressing the Done button on keyboard
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [[self mealNameLabel] setText:[textField text]];
     [textField resignFirstResponder]; //hide the keyboard
-    return @YES;
+    return YES;
 }
 
 //when the user inputs text to the meal name text field
@@ -96,10 +96,11 @@
     for (int i = 0; i < [string length]; i++) {
         //if the deprecated symbol is found - return NO (value of text field won't change)
         if (([string characterAtIndex:i] < 'A' || [string characterAtIndex:i] > 'z') && [string characterAtIndex:i] != ' ') {
-            return @NO;
+            
+            return NO;
         }
     }
-    return @YES;
+    return YES;
 }
 
 @end
