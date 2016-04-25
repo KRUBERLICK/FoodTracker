@@ -1,25 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mZc-iE-hco">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="x8b-LF-7cf">
+                                        <rect key="frame" x="8" y="38" width="359" height="451"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJQ-nw-YqG">
+                                                <rect key="frame" x="138" y="0.0" width="84" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Zhm-rc-KjX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RPs-MM-96h">
+                                                <rect key="frame" x="0.0" y="33" width="359" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="qBN-62-l83"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="hth-ho-E8a">
+                                                <rect key="frame" x="20" y="75" width="320" height="320"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="hth-ho-E8a" secondAttribute="height" multiplier="1:1" id="8jl-cU-Ygq"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="TYe-Cu-520" appends="YES" id="T5l-d4-YNj"/>
+                                                </connections>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="Y5d-YD-mZh" customClass="RatingControl">
+                                                <rect key="frame" x="60" y="407" width="240" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="vMz-vP-3pH"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="451" id="Lc7-vT-OLP"/>
+                                            <constraint firstItem="RPs-MM-96h" firstAttribute="leading" secondItem="x8b-LF-7cf" secondAttribute="leadingMargin" id="a0l-qr-Te9"/>
+                                            <constraint firstItem="RPs-MM-96h" firstAttribute="trailing" secondItem="x8b-LF-7cf" secondAttribute="trailingMargin" id="xEf-wu-O9M"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="x8b-LF-7cf" firstAttribute="top" secondItem="mZc-iE-hco" secondAttribute="topMargin" constant="30" id="5bJ-2m-QtO"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="x8b-LF-7cf" secondAttribute="bottom" constant="30" id="NBf-qT-JGK"/>
+                                    <constraint firstItem="x8b-LF-7cf" firstAttribute="centerX" secondItem="mZc-iE-hco" secondAttribute="centerX" id="WyS-D8-LYA"/>
+                                    <constraint firstItem="x8b-LF-7cf" firstAttribute="trailing" secondItem="mZc-iE-hco" secondAttribute="trailingMargin" id="dx3-Ku-8De"/>
+                                    <constraint firstItem="x8b-LF-7cf" firstAttribute="leading" secondItem="mZc-iE-hco" secondAttribute="leadingMargin" id="tv5-Sx-WSy"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mZc-iE-hco" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="7CU-FF-wxh"/>
+                            <constraint firstAttribute="trailing" secondItem="mZc-iE-hco" secondAttribute="trailing" id="Pyu-3e-aG3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mZc-iE-hco" secondAttribute="bottom" id="SOW-NW-FJC"/>
+                            <constraint firstItem="mZc-iE-hco" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="puJ-Z0-vxM"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="bJQ-nw-YqG" id="N9e-f2-FYa"/>
+                        <outlet property="nameTextField" destination="RPs-MM-96h" id="SyR-6f-mDa"/>
+                        <outlet property="photoImageView" destination="hth-ho-E8a" id="etc-uO-HkU"/>
+                        <outlet property="ratingControl" destination="Y5d-YD-mZh" id="f4G-3c-8a4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TYe-Cu-520">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="1j6-C5-HNt"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="564.5" y="488.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NoImage" width="540" height="540"/>
+    </resources>
 </document>

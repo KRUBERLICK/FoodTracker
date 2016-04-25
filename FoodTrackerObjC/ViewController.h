@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RatingControl.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *mealNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet RatingControl *ratingControl;
+
+- (IBAction)selectImageFromPhotoLibrary:(UITapGestureRecognizer *)sender;
 
 @end
 
